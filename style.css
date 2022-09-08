@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+bady {
+    background-image: linear-gradient(135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+.conteiner {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content-left {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size:cover;
+    background-position: center center;
+    padding: 0 40px 40px;
+    min-width: 60%;
+}
+
+.content-inner{
+    max-width: 500px;
+    margin: auto ;
+    
+}
+
+.right {
+    width: 40%;
+}
+
+.bg-image {
+    background-image: url(images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.logo {
+    margin: 60px 0;
+    width: 200px;
+    transform: translatex(-100%);
+    animation: comeinleft 0.7s ease forwards;
+}
+
+.bg-mobile {
+    display: none;
+}
+
+/* Estilizando H1 e descrição */
+
+h1 {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans';
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: 10px;
+    line-height: 1.1;
+    margin-bottom: 0;
+    transform: translatex(-100%);
+    text-transform: uppercase;
+    animation: comeinleft 0.7s ease forwards;
+}
+
+h1 span {
+    color:  hsl(0, 6%, 24%);
+    font-weight:700;
+}
+
+p  {
+    color: hsl(0, 36%, 70%);
+    line-height: 26px;
+    margin: 30px 0;
+    font-family: 'Josefin Sans';
+    transform: translateX(-100%);
+    animation: comeinleft 0.7s ease forwards;
+}
+
+form {
+    position: relative;
+    transform: translateX(-100%);
+    animation: comeinleft 0.7s ease forwards;
+}
+
+/* Estilizando input*/
+
+input {
+    background-color: transparent;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    height: 55px;
+    width: 100%;
+}
+
+input:focus {
+    border-width: 2px;
+    box-shadow: 0px 0px 10px hsl(0, 36%, 70%, 0.5);
+    outline: none;
+}
+
+input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+form.error input {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+/* Estilizando botão */
+
+button {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: opacity 0.2s ease;
+    height: 55px;
+    width: 100px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;   
+    display: block;
+}
+         
+button:hover {
+    opacity: 0.9;
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 110px;
+}
+
+form.error .error-icon {
+    display: block;
+}
+
+small {
+    color: hsl(0, 93%, 69%);
+    display: none;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+form.error small {
+    display: block;
+}
+
+/* Adicionando animação */
+
+@keyframes comeinleft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes comeinright {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Adicionando responsividade */
+  
+    @media screen and (max-width:600px) {
+
+    .content-left {
+        width: auto;
+    }
+    
+    .content-inner {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: -30px;
+        margin-right: -30px;
+        width: calc(100% + 30px);
+        
+    }
+
+    .bg-mobile {
+        display: block;
+        margin-left: -40px;
+        margin-right: -40px;
+        width: calc(100% + 80px);
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    h1 {
+        font-size:40px;
+        padding-top: 40px;
+        display: block;
+        text-align: center;
+    }
+
+    p {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px 0 30px 0;
+    }
+}
+
