@@ -26,5 +26,9 @@ Receba uma mensagem de erro quando o formulário for enviado se:
 
 
 ### Design desktop:
-
+![desktop-design](https://user-images.githubusercontent.com/96561261/189195899-a0a2e480-0404-4c3f-ada2-37ef759caa9c.jpg)
 ### Design mobile:
+![mobile-design](https://user-images.githubusercontent.com/96561261/189195901-2822327b-1bc8-4996-8249-4a96b3569324.jpg)
+### Design active-states:
+![active-states](https://user-images.githubusercontent.com/96561261/189195893-f8d521e0-10de-4777-b82b-14ffe7d32835.jpg)
+
